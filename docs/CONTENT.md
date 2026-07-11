@@ -25,6 +25,10 @@ Use these exactly; do not paraphrase:
 - Everything stays on device: single local JSON file, atomic writes.
   Game Center is optional. (This drives privacy.html.)
 - v1 was released on GitHub only; v2.0.0 is the App Store debut.
+- Free and open source: MIT License, © 2026 Kai Chen. No third-party
+  dependencies (pure Apple frameworks), so there is nothing to credit
+  beyond the license itself. Footer format:
+  `© 2026 Kai Chen · MIT License · Privacy`.
 
 ## Status
 
