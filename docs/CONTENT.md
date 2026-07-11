@@ -46,4 +46,4 @@ Use these exactly; do not paraphrase:
 
 Until launch: the download button says "Coming soon to the App Store" and
 carries the `TODO(app-store-url)` marker. Swap in the real badge + URL on
-launch day.
+launch day. Footer credits link Kai Chen to <https://kaichen.dev>.
