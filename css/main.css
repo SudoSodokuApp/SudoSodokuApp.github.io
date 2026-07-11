@@ -215,12 +215,16 @@ header nav a:hover {
 }
 
 #screenshots .carousel {
-	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 	max-width: 60rem;
 	margin-inline: auto;
 }
 
 #screenshots .strip {
+	flex: 1 1 auto;
+	min-width: 0;
 	display: flex;
 	gap: 1.25rem;
 	overflow-x: auto;
@@ -244,42 +248,35 @@ header nav a:hover {
 }
 
 /* click-to-page arrows: JS-only affordance (scroll works fine without JS
-   via touch/trackpad), so they're hidden unless html.js is present */
+   via touch/trackpad), so they're hidden unless html.js is present. They
+   sit beside the strip, outside the images — never overlapping them. */
 .scroll-btn {
 	display: none;
 }
 .js .scroll-btn {
+	flex: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	top: 45%;
-	transform: translateY(-50%);
-	z-index: 2;
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 2.25rem;
+	height: 2.25rem;
 	border-radius: 50%;
 	border: 1px solid var(--separator);
-	background: light-dark(hsla(0, 0%, 100%, .85), hsla(216, 33%, 14%, .85));
+	background: var(--card-background);
 	color: var(--text);
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	line-height: 1;
 	cursor: pointer;
-	box-shadow: 0 6px 20px light-dark(hsla(216, 33%, 20%, .18), hsla(0, 0%, 0%, .4));
-	-webkit-backdrop-filter: blur(6px);
-	backdrop-filter: blur(6px);
 }
 .js .scroll-btn:hover {
-	background: light-dark(white, hsl(216, 33%, 18%));
+	background: light-dark(hsla(0, 0%, 0%, .06), hsla(0, 0%, 100%, .12));
 }
-.js .scroll-prev { left: 0.25rem; }
-.js .scroll-next { right: 0.25rem; }
 
 @media (max-width: 640px) {
 	.js .scroll-btn {
-		width: 2.1rem;
-		height: 2.1rem;
-		font-size: 1.15rem;
+		width: 1.9rem;
+		height: 1.9rem;
+		font-size: 1.05rem;
 	}
 }
 
