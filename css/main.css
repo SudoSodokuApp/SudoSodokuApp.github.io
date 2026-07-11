@@ -168,8 +168,12 @@ header nav a:hover {
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: hsla(0, 0%, 100%, .16);
 }
+
+/* macOS traffic lights */
+#terminal .titlebar i:nth-child(1) { background: #FF5F57; }
+#terminal .titlebar i:nth-child(2) { background: #FEBC2E; }
+#terminal .titlebar i:nth-child(3) { background: #28C840; }
 
 #terminal pre {
 	padding: 1.1rem 1.3rem 1.3rem;
