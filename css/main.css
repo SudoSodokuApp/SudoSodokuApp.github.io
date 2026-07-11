@@ -223,7 +223,8 @@ header nav a:hover {
 
 #highlights {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	/* four pillars: 2×2 on desktop, single column on narrow screens */
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	gap: 2.5rem;
 	max-width: 60rem;
 	margin-inline: auto;

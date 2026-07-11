@@ -1,8 +1,8 @@
 # SudoSodokuApp.github.io
 
 Marketing site for [SudoSodoku](https://github.com/SudoSodokuApp/SudoSodoku) —
-`sudo solve`, root access for logical purists. A terminal-fantasy sudoku for
-iPhone, currently in App Store review (v2.0.0).
+`sudo solve`, logic is root access. A terminal-fantasy sudoku for iPhone;
+v2.0.0 App Store submission in progress.
 
 Plain HTML + CSS, no build step, served by GitHub Pages. Design language:
 Apple's design principles — minimal, content-first — carrying the app's
@@ -40,4 +40,5 @@ Push to `main`. GitHub Pages serves the repo root at
 ## Before launch
 
 - [ ] Replace the `TODO(app-store-url)` placeholder once the App Store page is live
-- [ ] Add real App Store screenshots to the screenshots section
+- [ ] Add the 6 simulator screenshots (1320×2868, from Kai: landing / breach /
+      archives / stats / whoami / in-game) to a screenshots section
