@@ -1,4 +1,4 @@
-# AGENTS.md — sudosodoku.github.io
+# AGENTS.md — SudoSodokuApp.github.io (site: https://sudosodokuapp.github.io)
 
 Marketing site for **SudoSodoku**, a terminal-fantasy sudoku for iPhone
 (<https://github.com/SudoSodokuApp/SudoSodoku>). Served by GitHub Pages,

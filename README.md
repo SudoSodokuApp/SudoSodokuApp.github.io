@@ -1,4 +1,4 @@
-# sudosodoku.github.io
+# SudoSodokuApp.github.io
 
 Marketing site for [SudoSodoku](https://github.com/SudoSodokuApp/SudoSodoku) —
 `sudo solve`, root access for logical purists. A terminal-fantasy sudoku for
@@ -32,7 +32,7 @@ That's it. There is nothing to install and nothing to build.
 ## Deploying
 
 Push to `main`. GitHub Pages serves the repo root at
-<https://sudosodoku.github.io>.
+<https://sudosodokuapp.github.io>.
 
 ## Before launch
 
