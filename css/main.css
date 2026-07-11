@@ -230,6 +230,11 @@ header nav a:hover {
 	scroll-snap-align: center;
 }
 
+#screenshots figure a {
+	display: block;
+	cursor: zoom-in;
+}
+
 #screenshots img {
 	display: block;
 	width: clamp(200px, 62vw, 250px);
@@ -237,6 +242,72 @@ header nav a:hover {
 	border-radius: 20px;
 	border: 1px solid var(--separator);
 	box-shadow: 0 10px 30px light-dark(hsla(216, 33%, 20%, .18), hsla(0, 0%, 0%, .5));
+}
+
+/* lightbox: pure CSS via :target, no JS required */
+.lightbox {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 999;
+}
+
+.lightbox:target {
+	display: block;
+}
+
+.lightbox .lightbox-backdrop {
+	position: absolute;
+	inset: 0;
+	background: hsla(0, 0%, 0%, .85);
+}
+
+.lightbox .frame {
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	pointer-events: none;
+}
+
+.lightbox .frame .lightbox-close-img {
+	pointer-events: auto;
+	display: block;
+	line-height: 0;
+}
+
+.lightbox .frame img {
+	max-width: min(90vw, 420px);
+	max-height: 86vh;
+	width: auto;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 20px 60px hsla(0, 0%, 0%, .6);
+	cursor: zoom-out;
+}
+
+.lightbox-close {
+	pointer-events: auto;
+	position: absolute;
+	top: 1rem;
+	right: 1.25rem;
+	width: 2.25rem;
+	height: 2.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: hsla(0, 0%, 100%, .14);
+	color: white;
+	font-size: 1.5rem;
+	line-height: 1;
+	text-decoration: none;
+}
+.lightbox-close:hover {
+	background: hsla(0, 0%, 100%, .24);
+	text-decoration: none;
 }
 
 
