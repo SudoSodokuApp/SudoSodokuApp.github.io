@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns#">
+	<meta charset="UTF-8"/>
+
+	<title>SudoSodoku — Sudoku for iPhone</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="description" content="sudo solve — root access for logical purists. A terminal-fantasy sudoku for iPhone. Pure logic, zero noise, real ELO."/>
+
+	<meta property="og:type"        content="website"/>
+	<meta property="og:url"         content="https://sudosodoku.github.io"/>
+	<meta property="og:title"       content="SudoSodoku"/>
+	<meta property="og:description" content="sudo solve — root access for logical purists. A terminal-fantasy sudoku for iPhone."/>
+	<meta property="og:image"       content="https://sudosodoku.github.io/img/appicon/appicon-512.png"/>
+	<meta property="og:locale"      content="en_US"/>
+	<meta property="twitter:card"   content="summary"/>
+
+	<link rel="icon" href="favicon.png" type="image/png"/>
+	<link rel="apple-touch-icon" href="img/appicon/appicon-256.png"/>
+	<link rel="stylesheet" href="css/main.css"/>
+</head>
+
+
+<body>
+
+<header>
+	<nav><ul>
+		<li><a href="privacy">Privacy</a></li>
+		<li><a href="https://github.com/SudoSodokuApp/SudoSodoku" rel="external">GitHub</a></li>
+	</ul></nav>
+</header>
+
+
+<main>
+	<section id="top">
+		<img src="img/appicon/appicon-256.png" srcset="img/appicon/appicon-512.png 2x"
+		  width="128" height="128" class="appicon" alt="SudoSodoku app icon"/>
+
+		<h1>SudoSodoku</h1>
+		<p class="tagline"><code>sudo solve</code> — root access for logical purists.</p>
+
+		<section id="latest">
+			<!-- TODO(app-store-url): replace with the real App Store badge + link on launch day -->
+			<span class="download coming-soon">Coming soon to the App&nbsp;Store</span>
+			<p class="platform">iPhone&ensp;·&ensp;iOS 17.0+&ensp;·&ensp;v2.0.0</p>
+		</section>
+	</section>
+
+	<section id="terminal" aria-label="App preview">
+		<div class="window">
+			<div class="titlebar" aria-hidden="true"><i></i><i></i><i></i></div>
+			<pre><code>root@ios:~$ sudo sudosodoku breach --master
+[sudo] password for logic: ********
+> generating_grid ......... [OK]
+> uniqueness_check ........ [OK]
+> difficulty_index ........ 84
+> ACCESS GRANTED
+root@ios:~$ <span class="cursor">█</span></code></pre>
+		</div>
+	</section>
+
+	<p id="lead">Pure logic. Zero noise.</p>
+
+	<section id="highlights">
+		<h2>Why SudoSodoku?</h2>
+
+		<section>
+			<h3>You're not filling numbers</h3>
+			<p class="cmd" aria-hidden="true">$ breach --master</p>
+			<p>You're breaching systems. The app is one continuous shell session — every screen a subcommand, every puzzle a live breach log, every victory an <code>ACCESS GRANTED</code>.</p>
+		</section>
+
+		<section>
+			<h3>Nothing interrupts a deduction</h3>
+			<p class="cmd" aria-hidden="true">$ killall noise</p>
+			<p>No ads. No lives. No pay-to-win. No fail state — boards are finished or unfinished, never "lost". Even the timer is optional.</p>
+		</section>
+
+		<section>
+			<h3>Earn your rank</h3>
+			<p class="cmd" aria-hidden="true">$ whoami</p>
+			<p>A real ELO ladder with anti-smurfing, from <code>SCRIPT_KIDDIE</code> to <code>THE_ARCHITECT</code>. Leaderboards rank performance — never spending.</p>
+		</section>
+	</section>
+
+	<section id="features">
+		<h2>features</h2>
+
+		<div>
+			<section>
+				<h3>Grids grown, not stored</h3>
+				<p>Every puzzle is generated in real time — unique solution, human-gradable, scored 0–100 by a logical solver. Never a canned database.</p>
+			</section>
+
+			<section>
+				<h3>Four honest flags</h3>
+				<p><code>--easy</code> never dead-ends you, <code>--hard</code> is built around a fair "aha" and never demands guessing, <code>--master</code> resists intermediate techniques entirely.</p>
+			</section>
+
+			<section>
+				<h3>Notes that think</h3>
+				<p>Placing a digit sweeps it from peer pencil notes; undo restores everything as one move. The numpad strikes through exhausted digits.</p>
+			</section>
+
+			<section>
+				<h3>A ladder worth climbing</h3>
+				<p>ELO from 1200 with adaptive K-factor, six ranks, Game Center leaderboards, and eleven achievements — one of them secret.</p>
+			</section>
+
+			<section>
+				<h3>Juice with respect</h3>
+				<p>Mechanical-keyboard haptics, phosphor pulses, matrix-rain victories. Every animation respects Reduce Motion; sound is never forced on.</p>
+			</section>
+
+			<section>
+				<h3>Yours, on device</h3>
+				<p>No accounts, no tracking, fully playable offline. Your history lives in a single local file that never leaves your iPhone.</p>
+			</section>
+		</div>
+	</section>
+
+	<section id="develop">
+		<section>
+			<h3>Found a bug in the system?</h3>
+			<p>Report it — or read the source. SudoSodoku is developed in the open on our <a href="https://github.com/SudoSodokuApp/SudoSodoku/issues" title="Issues · SudoSodokuApp/SudoSodoku">issue tracker</a>.</p>
+		</section>
+
+		<a href="https://github.com/SudoSodokuApp/SudoSodoku" title="SudoSodoku on GitHub" class="github">Project Page on GitHub</a>
+	</section>
+</main>
+
+
+<footer>
+	<p class="copyright">© 2026 SudoSodoku&ensp;·&ensp;<a href="privacy">Privacy</a></p>
+</footer>
+</body>
+</html>
