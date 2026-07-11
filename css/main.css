@@ -218,29 +218,36 @@ header nav a:hover {
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	max-width: 60rem;
+	width: fit-content;
+	max-width: 100%;
 	margin-inline: auto;
 }
 
+/* strip width is the source of truth: exactly two cards + one gap fit,
+   never a peek of a third. The 7.5rem subtracted below covers the two
+   arrow buttons + carousel gaps + section side padding at the
+   narrowest supported viewport — keep in sync if those change. */
 #screenshots .strip {
-	flex: 1 1 auto;
-	min-width: 0;
+	--gap: 1.25rem;
+	flex: none;
+	width: min(660px, calc(100vw - 7.5rem));
 	display: flex;
-	gap: 1.25rem;
+	gap: var(--gap);
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
-	padding: 0.5rem 0.25rem 1.25rem;
+	padding-block: 0.5rem 1.25rem;
 	scrollbar-width: thin;
 }
 
 #screenshots figure {
 	flex: none;
-	scroll-snap-align: center;
+	width: calc((100% - var(--gap)) / 2);
+	scroll-snap-align: start;
 }
 
 #screenshots img {
 	display: block;
-	width: clamp(255px, 79vw, 319px);
+	width: 100%;
 	height: auto;
 	border-radius: 20px;
 	border: 1px solid var(--separator);
