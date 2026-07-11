@@ -28,6 +28,9 @@ That's it. There is nothing to install and nothing to build.
 | `docs/DESIGN.md` | Design language spec |
 | `docs/CONTENT.md` | Copy guidelines and canonical strings |
 | `AGENTS.md` | Working agreement for AI agents (CLAUDE.md imports it) |
+| `CONTRIBUTING.md` | How to contribute (what's welcome, verify checklist) |
+| `LICENSE` | MIT, same as [the app](https://github.com/SudoSodokuApp/SudoSodoku) |
+| `.github/` | Issue/PR templates, security policy, Proof HTML CI |
 
 ## Deploying
 

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📱 SudoSodoku app issues
+    url: https://github.com/SudoSodokuApp/SudoSodoku/issues
+    about: Bugs and feature requests for the iOS app itself — not the website
+  - name: 💬 GitHub Discussions
+    url: https://github.com/SudoSodokuApp/SudoSodoku/discussions
+    about: Ask questions, share ideas, or discuss the project

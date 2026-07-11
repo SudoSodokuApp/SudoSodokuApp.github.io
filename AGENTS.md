@@ -50,7 +50,11 @@ css/main.css      All styles, one file
 img/appicon/      App icon renditions (source: app repo AppIcon_V3.png)
 docs/DESIGN.md    Design language spec — read before any visual change
 docs/CONTENT.md   Copy guidelines and canonical strings
+.github/          Issue/PR templates, SECURITY.md, Proof HTML workflow
 ```
+
+Community files (LICENSE — MIT, CONTRIBUTING.md, CODE_OF_CONDUCT.md)
+mirror the app repo; keep them in sync with it rather than diverging.
 
 ## Verify checklist (run before finishing any task)
 
