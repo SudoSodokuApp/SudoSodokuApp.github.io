@@ -41,11 +41,13 @@ Section order on the landing page:
 
 1. Hero — app icon, name, one-line tagline, App Store badge
 2. Terminal window — the product visual (CSS-drawn, no image)
-3. Lead line — one sentence, large, secondary color
-4. Highlights — 3 cards: why this app
-5. Features — 2–3 column grid of short feature cards
-6. Feedback / GitHub section
-7. Footer — copyright
+3. Screenshots — CSS scroll-snap strip, no JS; 640px JPEGs, lazy-loaded
+   except the first
+4. Lead line — one sentence, large, secondary color
+5. Highlights — the four philosophy pillars
+6. Features — 2–3 column grid of short feature cards
+7. Feedback / GitHub section
+8. Footer — copyright
 
 ## Motion
 

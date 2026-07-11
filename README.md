@@ -42,5 +42,5 @@ still mirrors the site at <https://sudosodokuapp.github.io>.
 ## Before launch
 
 - [ ] Replace the `TODO(app-store-url)` placeholder once the App Store page is live
-- [ ] Add the 6 simulator screenshots (1320×2868, from Kai: landing / breach /
-      archives / stats / whoami / in-game) to a screenshots section
+- [x] Screenshots section (7 shots, 640px JPEGs in `img/screenshots/`,
+      resized from Kai's 1320×2708 originals)
