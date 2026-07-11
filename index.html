@@ -20,6 +20,7 @@
 	<link rel="icon" href="favicon.png" type="image/png"/>
 	<link rel="apple-touch-icon" href="img/appicon/appicon-256.png"/>
 	<link rel="stylesheet" href="css/main.css"/>
+	<script>document.documentElement.classList.add('js');</script>
 </head>
 
 
@@ -64,14 +65,18 @@ root@ios:~$ <span class="cursor">█</span></code></pre>
 	<p id="lead">Logic is root access.</p>
 
 	<section id="screenshots" aria-label="App screenshots">
-		<div class="strip">
-			<figure><img src="img/screenshots/01_landing.jpg" width="640" height="1313" alt="[screenshot: landing terminal — root@ios:~$ types sudo sudosodoku, tab completion offers breach, archives, stats, whoami]"/></figure>
-			<figure><img src="img/screenshots/02_breach.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: breach log generating a puzzle — uniqueness check OK, difficulty index]"/></figure>
-			<figure><img src="img/screenshots/06_game.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: in-game board with pencil notes and terminal numpad]"/></figure>
-			<figure><img src="img/screenshots/07_victory.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: victory sequence — matrix rain and ACCESS GRANTED]"/></figure>
-			<figure><img src="img/screenshots/03_archives.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: archives — puzzle history and records]"/></figure>
-			<figure><img src="img/screenshots/04_stats.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: stats — performance metrics]"/></figure>
-			<figure><img src="img/screenshots/05_whoami.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: whoami — operator profile with ELO rating and rank]"/></figure>
+		<div class="carousel">
+			<button type="button" class="scroll-btn scroll-prev" aria-label="Previous screenshot">&lsaquo;</button>
+			<div class="strip">
+				<figure><img src="img/screenshots/01_landing.jpg" width="640" height="1313" alt="[screenshot: landing terminal — root@ios:~$ types sudo sudosodoku, tab completion offers breach, archives, stats, whoami]"/></figure>
+				<figure><img src="img/screenshots/02_breach.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: breach log generating a puzzle — uniqueness check OK, difficulty index]"/></figure>
+				<figure><img src="img/screenshots/06_game.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: in-game board with pencil notes and terminal numpad]"/></figure>
+				<figure><img src="img/screenshots/07_victory.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: victory sequence — matrix rain and ACCESS GRANTED]"/></figure>
+				<figure><img src="img/screenshots/03_archives.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: archives — puzzle history and records]"/></figure>
+				<figure><img src="img/screenshots/04_stats.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: stats — performance metrics]"/></figure>
+				<figure><img src="img/screenshots/05_whoami.jpg" width="640" height="1313" loading="lazy" alt="[screenshot: whoami — operator profile with ELO rating and rank]"/></figure>
+			</div>
+			<button type="button" class="scroll-btn scroll-next" aria-label="Next screenshot">&rsaquo;</button>
 		</div>
 	</section>
 
@@ -153,5 +158,23 @@ root@ios:~$ <span class="cursor">█</span></code></pre>
 <footer>
 	<p class="copyright">© 2026 <a href="https://kaichen.dev" rel="external">Kai T. Chen</a>&ensp;·&ensp;<a href="https://github.com/SudoSodokuApp/SudoSodoku/blob/main/LICENSE" rel="external">MIT License</a>&ensp;·&ensp;<a href="privacy">Privacy</a></p>
 </footer>
+
+<script>
+(function () {
+	var strip = document.querySelector('#screenshots .strip');
+	var prev = document.querySelector('.scroll-prev');
+	var next = document.querySelector('.scroll-next');
+	if (!strip || !prev || !next) return;
+	function page(direction) {
+		var card = strip.querySelector('figure');
+		if (!card) return;
+		var gap = parseFloat(getComputedStyle(strip).gap) || 0;
+		var amount = card.getBoundingClientRect().width + gap;
+		strip.scrollBy({ left: direction * amount, behavior: 'smooth' });
+	}
+	prev.addEventListener('click', function () { page(-1); });
+	next.addEventListener('click', function () { page(1); });
+})();
+</script>
 </body>
 </html>

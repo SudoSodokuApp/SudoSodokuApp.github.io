@@ -214,11 +214,15 @@ header nav a:hover {
 	padding-block: 2rem 0;
 }
 
+#screenshots .carousel {
+	position: relative;
+	max-width: 60rem;
+	margin-inline: auto;
+}
+
 #screenshots .strip {
 	display: flex;
 	gap: 1.25rem;
-	max-width: 60rem;
-	margin-inline: auto;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	padding: 0.5rem 0.25rem 1.25rem;
@@ -232,11 +236,51 @@ header nav a:hover {
 
 #screenshots img {
 	display: block;
-	width: clamp(300px, 93vw, 375px);
+	width: clamp(255px, 79vw, 319px);
 	height: auto;
 	border-radius: 20px;
 	border: 1px solid var(--separator);
 	box-shadow: 0 10px 30px light-dark(hsla(216, 33%, 20%, .18), hsla(0, 0%, 0%, .5));
+}
+
+/* click-to-page arrows: JS-only affordance (scroll works fine without JS
+   via touch/trackpad), so they're hidden unless html.js is present */
+.scroll-btn {
+	display: none;
+}
+.js .scroll-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	z-index: 2;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	border: 1px solid var(--separator);
+	background: light-dark(hsla(0, 0%, 100%, .85), hsla(216, 33%, 14%, .85));
+	color: var(--text);
+	font-size: 1.4rem;
+	line-height: 1;
+	cursor: pointer;
+	box-shadow: 0 6px 20px light-dark(hsla(216, 33%, 20%, .18), hsla(0, 0%, 0%, .4));
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+}
+.js .scroll-btn:hover {
+	background: light-dark(white, hsl(216, 33%, 18%));
+}
+.js .scroll-prev { left: 0.25rem; }
+.js .scroll-next { right: 0.25rem; }
+
+@media (max-width: 640px) {
+	.js .scroll-btn {
+		width: 2.1rem;
+		height: 2.1rem;
+		font-size: 1.15rem;
+	}
 }
 
 
