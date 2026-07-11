@@ -34,8 +34,10 @@ That's it. There is nothing to install and nothing to build.
 
 ## Deploying
 
-Push to `main`. GitHub Pages serves the repo root at
-<https://sudosodokuapp.github.io>.
+Push to `main`. Vercel serves the repo root at
+<https://sudosodoku.kaichen.dev> (canonical). `vercel.json` enables
+`cleanUrls` so extensionless links like `/privacy` resolve. GitHub Pages
+still mirrors the site at <https://sudosodokuapp.github.io>.
 
 ## Before launch
 
