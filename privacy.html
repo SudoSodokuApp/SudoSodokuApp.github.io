@@ -37,12 +37,49 @@
 		article ul {
 			padding-inline-start: 1.25rem;
 		}
-		article blockquote {
-			margin-block: 1.5rem;
-			padding: 1rem 1.25rem;
-			border-inline-start: 3px solid var(--accent);
-			background: var(--card-background);
-			border-radius: 0 10px 10px 0;
+		.terminal-quote {
+			margin-block: 1.75rem;
+			border-radius: 12px;
+			overflow: hidden;
+			background: var(--terminal-bg);
+			border: 1px solid light-dark(hsla(216, 33%, 7%, .15), hsla(0, 0%, 100%, .12));
+			box-shadow: 0 14px 34px light-dark(hsla(216, 33%, 20%, .2), hsla(0, 0%, 0%, .55));
+		}
+		.terminal-quote .titlebar {
+			display: flex;
+			gap: 7px;
+			padding: 10px 14px;
+			border-block-end: 1px solid hsla(0, 0%, 100%, .07);
+		}
+		.terminal-quote .titlebar i {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+		}
+		.terminal-quote .titlebar i:nth-child(1) { background: #FF5F57; }
+		.terminal-quote .titlebar i:nth-child(2) { background: #FEBC2E; }
+		.terminal-quote .titlebar i:nth-child(3) { background: #28C840; }
+		.terminal-quote pre {
+			margin: 0;
+			padding: 1rem 1.25rem 1.3rem;
+			font-family: var(--mono);
+			font-size: 0.8rem;
+			line-height: 1.75;
+			color: var(--terminal-green);
+			white-space: pre-wrap;
+			text-shadow: 0 0 6px hsla(142, 70%, 55%, .25);
+		}
+		.terminal-quote .prompt {
+			opacity: .65;
+		}
+		.terminal-quote .headline {
+			display: block;
+			margin-block: 0.6em 0.2em;
+			font-weight: 700;
+		}
+		.terminal-quote .body {
+			display: block;
+			white-space: normal;
 		}
 	</style>
 </head>
@@ -66,15 +103,13 @@
 		<p>This page summarizes the canonical policy, which lives with the app's
 		source code:
 		<a href="https://github.com/SudoSodokuApp/SudoSodoku/blob/main/PRIVACY.md" rel="external">PRIVACY.md</a>.
-		In the policy's own words:</p>
+		The short version, straight from the file:</p>
 
-		<blockquote>
-			<p><strong>We do not collect your data.</strong> Everything the game knows
-			about you is stored locally on your device. We operate no servers, embed
-			no analytics or advertising SDKs, and never see your data. The only
-			online feature is Apple's Game Center, which is optional and operated
-			by Apple.</p>
-		</blockquote>
+		<div class="terminal-quote">
+			<div class="titlebar" aria-hidden="true"><i></i><i></i><i></i></div>
+			<pre><code><span class="prompt">root@ios:~$</span> cat PRIVACY.md
+<span class="headline">We do not collect your data.</span><span class="body">Everything the game knows about you is stored locally on your device. We operate no servers, embed no analytics or advertising SDKs, and never see your data. The only online feature is Apple's Game Center, which is optional and operated by Apple.</span></code></pre>
+		</div>
 
 		<h2>On your device, and nowhere else</h2>
 		<p>The app keeps a single local save file containing your game history,
