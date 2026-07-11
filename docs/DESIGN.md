@@ -29,7 +29,7 @@ If the whole page turns green-on-black, we've lost the plot.
 
 - Prose: `-apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', sans-serif`
 - Terminal/code: `ui-monospace, 'SF Mono', 'Menlo', monospace`
-- Scale: `html { font-size: 120% }` sets the global type scale — all
+- Scale: `html { font-size: 110% }` sets the global type scale — all
   rem-based sizes and max-widths grow together, so tune sizes in rem and
   the scale in that one place. Hero `h1` is the app name in monospace
   (it's a command, after all); body is 1rem/1.6 on that scale.
