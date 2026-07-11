@@ -42,13 +42,22 @@ Section order on the landing page:
 1. Hero — app icon, name, one-line tagline, App Store badge
 2. Terminal window — the product visual (CSS-drawn, no image)
 3. Lead line — one sentence, large, secondary color
-4. Screenshots — CSS scroll-snap strip, 640px JPEGs at clamp(255–319px),
-   lazy-loaded except the first. Prev/next arrow buttons page by one
-   card — the one deliberate JS exception on this page: a tiny inline
-   script (`<html class="js">` toggle + `scrollBy` on click) enhances
-   the strip, which is already fully usable via touch/trackpad drag
-   with JS off. The `.js` gate means the buttons don't render at all
-   without JS, so there's no dead control
+4. Screenshots — CSS scroll-snap strip, 640px JPEGs, lazy-loaded except
+   the first. Two distinct layouts split at 640px:
+   - **Mobile (≤640px)**: free-scrolling strip, no arrows, images at
+     clamp(200–250px) — the original layout, touch/trackpad drag only.
+   - **Desktop/tablet (>640px)**: exactly two screenshots visible at a
+     time. The strip's width is the source of truth
+     (`min(680px, 100vw - 7.5rem)`) and figure width is derived from it
+     — `calc((100% - gap) / 2)` — so two cards + one gap always fill it
+     exactly, no peek of a third. `box-sizing: border-box` on the img
+     is load-bearing here: without it the 1px border adds on top of
+     the 100% width and clips the second card by a couple pixels.
+     Prev/next arrows page by exactly one card — the one deliberate JS
+     exception on this page: a tiny inline script (`<html class="js">`
+     toggle + `scrollBy` on click) enhances the strip, which is already
+     fully usable via drag with JS off. The `.js` gate means the
+     buttons don't render at all without JS, so there's no dead control
 5. Highlights — the four philosophy pillars
 6. Features — 2–3 column grid of short feature cards
 7. Feedback / GitHub section

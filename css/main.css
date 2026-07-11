@@ -214,76 +214,94 @@ header nav a:hover {
 	padding-block: 2rem 0;
 }
 
+/* mobile (<=640px): the original free-scrolling strip, no arrows —
+   touch/trackpad drag is the only (and simplest) interaction here. */
 #screenshots .carousel {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	width: fit-content;
-	max-width: 100%;
-	margin-inline: auto;
+	display: block;
 }
 
-/* strip width is the source of truth: exactly two cards + one gap fit,
-   never a peek of a third. The 7.5rem subtracted below covers the two
-   arrow buttons + carousel gaps + section side padding at the
-   narrowest supported viewport — keep in sync if those change. */
 #screenshots .strip {
-	--gap: 1.25rem;
-	flex: none;
-	width: min(660px, calc(100vw - 7.5rem));
 	display: flex;
-	gap: var(--gap);
+	gap: 1.25rem;
+	max-width: 60rem;
+	margin-inline: auto;
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
-	padding-block: 0.5rem 1.25rem;
+	padding: 0.5rem 0.25rem 1.25rem;
 	scrollbar-width: thin;
 }
 
 #screenshots figure {
 	flex: none;
-	width: calc((100% - var(--gap)) / 2);
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 }
 
 #screenshots img {
 	display: block;
-	width: 100%;
+	box-sizing: border-box;
+	width: clamp(200px, 62vw, 250px);
 	height: auto;
 	border-radius: 20px;
 	border: 1px solid var(--separator);
 	box-shadow: 0 10px 30px light-dark(hsla(216, 33%, 20%, .18), hsla(0, 0%, 0%, .5));
 }
 
-/* click-to-page arrows: JS-only affordance (scroll works fine without JS
-   via touch/trackpad), so they're hidden unless html.js is present. They
-   sit beside the strip, outside the images — never overlapping them. */
 .scroll-btn {
 	display: none;
 }
-.js .scroll-btn {
-	flex: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 2.25rem;
-	height: 2.25rem;
-	border-radius: 50%;
-	border: 1px solid var(--separator);
-	background: var(--card-background);
-	color: var(--text);
-	font-size: 1.3rem;
-	line-height: 1;
-	cursor: pointer;
-}
-.js .scroll-btn:hover {
-	background: light-dark(hsla(0, 0%, 0%, .06), hsla(0, 0%, 100%, .12));
-}
 
-@media (max-width: 640px) {
+/* desktop/tablet (>640px): exactly two screenshots visible, paged one
+   at a time via click-to-page arrows (JS-only affordance — hidden
+   unless html.js is present; scroll still works fine without JS via
+   trackpad/mouse-wheel drag). Strip width is the source of truth:
+   figure width is derived from it so two cards + one gap always fill
+   it exactly, with no peek of a third. */
+@media (min-width: 641px) {
+	#screenshots .carousel {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: fit-content;
+		max-width: 100%;
+		margin-inline: auto;
+	}
+
+	#screenshots .strip {
+		--gap: 1.25rem;
+		flex: none;
+		width: min(680px, calc(100vw - 7.5rem));
+		max-width: none;
+		margin-inline: 0;
+		gap: var(--gap);
+		padding: 0.5rem 0 1.25rem;
+	}
+
+	#screenshots figure {
+		width: calc((100% - var(--gap)) / 2);
+		scroll-snap-align: start;
+	}
+
+	#screenshots img {
+		width: 100%;
+	}
+
 	.js .scroll-btn {
-		width: 1.9rem;
-		height: 1.9rem;
-		font-size: 1.05rem;
+		flex: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.25rem;
+		height: 2.25rem;
+		border-radius: 50%;
+		border: 1px solid var(--separator);
+		background: var(--card-background);
+		color: var(--text);
+		font-size: 1.3rem;
+		line-height: 1;
+		cursor: pointer;
+	}
+	.js .scroll-btn:hover {
+		background: light-dark(hsla(0, 0%, 0%, .06), hsla(0, 0%, 100%, .12));
 	}
 }
 
