@@ -2,8 +2,8 @@
 
 Marketing site for **SudoSodoku**, a terminal-fantasy sudoku for iPhone
 (<https://github.com/SudoSodokuApp/SudoSodoku>). Served by GitHub Pages,
-no build step. Design reference: <https://coteditor.com> — Apple-minimal,
-paper-fast, plain HTML.
+no build step. The design follows Apple's design principles: minimal,
+content-first, paper-fast, plain HTML.
 
 ## Hard constraints
 
@@ -44,7 +44,7 @@ Derived from [karpathy-guidelines](https://github.com/multica-ai/andrej-karpathy
 ## File map
 
 ```
-index.html        Landing page (structure mirrors coteditor.com)
+index.html        Landing page
 privacy.html      Privacy policy (App Store requirement)
 css/main.css      All styles, one file
 img/appicon/      App icon renditions (source: app repo AppIcon_V3.png)

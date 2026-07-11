@@ -25,6 +25,11 @@
 	padding: 0;
 }
 
+html {
+	/* global type scale: all rem-based sizes and widths grow together */
+	font-size: 120%;
+}
+
 body {
 	font: 1rem/1.6 -apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', 'Segoe UI', sans-serif;
 	color: var(--text);
@@ -58,7 +63,7 @@ h3 {
 }
 
 main > section {
-	padding: 3rem 1.5rem;
+	padding: 3rem 1.25rem;
 }
 
 
@@ -69,12 +74,12 @@ header nav ul {
 	justify-content: flex-end;
 	gap: 1.75rem;
 	list-style: none;
-	padding: 1rem 1.5rem;
+	padding: 1.1rem 1.25rem;
 }
 
 header nav a {
 	color: var(--secondary-text);
-	font-size: 0.925rem;
+	font-size: 1rem;
 }
 header nav a:hover {
 	color: var(--accent);
@@ -177,9 +182,12 @@ header nav a:hover {
 }
 
 @media (max-width: 480px) {
+	#terminal {
+		padding-inline: 0.75rem;
+	}
 	#terminal pre {
-		padding: 1rem;
-		font-size: 0.72rem;
+		padding: 0.9rem 1rem;
+		font-size: 0.62rem;
 	}
 }
 

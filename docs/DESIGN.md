@@ -2,8 +2,8 @@
 
 The site sits at the intersection of two identities:
 
-1. **Apple-minimal** (the CotEditor model): white/near-black page, system
-   fonts, generous whitespace, centered single column, content-first.
+1. **Apple's design principles**: white/near-black page, system fonts,
+   generous whitespace, centered single column, content-first.
 2. **The app's terminal fantasy**: phosphor green on deep dark glass,
    all-monospace, `root@ios:~$` command lines, `ACCESS GRANTED`.
 
@@ -29,13 +29,15 @@ If the whole page turns green-on-black, we've lost the plot.
 
 - Prose: `-apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', sans-serif`
 - Terminal/code: `ui-monospace, 'SF Mono', 'Menlo', monospace`
-- Scale: hero `h1` is the app name in monospace (it's a command, after all);
-  everything else follows CotEditor's quiet sizing — body ~1rem/1.6.
+- Scale: `html { font-size: 120% }` sets the global type scale — all
+  rem-based sizes and max-widths grow together, so tune sizes in rem and
+  the scale in that one place. Hero `h1` is the app name in monospace
+  (it's a command, after all); body is 1rem/1.6 on that scale.
 
 ## Layout
 
 Single centered column, `max-width` ~ 60rem for grids, ~40rem for prose.
-Section order on the landing page (mirrors coteditor.com):
+Section order on the landing page:
 
 1. Hero — app icon, name, one-line tagline, App Store badge
 2. Terminal window — the product visual (CSS-drawn, no image)

@@ -5,8 +5,8 @@ Marketing site for [SudoSodoku](https://github.com/SudoSodokuApp/SudoSodoku) —
 iPhone, currently in App Store review (v2.0.0).
 
 Plain HTML + CSS, no build step, served by GitHub Pages. Design language:
-Apple-minimal in the spirit of [coteditor.com](https://coteditor.com), carrying
-the app's phosphor-green terminal identity.
+Apple's design principles — minimal, content-first — carrying the app's
+phosphor-green terminal identity.
 
 ## Local preview
 
