@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/appicon/appicon-256.png" srcset="img/appicon/appicon-512.png 2x" width="128" height="128" alt="SudoSodoku logo">
+</p>
+
 # SudoSodokuApp.github.io
 
 Marketing site for [SudoSodoku](https://github.com/SudoSodokuApp/SudoSodoku) —
