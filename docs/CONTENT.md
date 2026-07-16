@@ -45,9 +45,9 @@ Use these exactly; do not paraphrase:
 ## Status
 
 - Pre-submission: download button said "Coming soon to the App Store".
-- 2026-07-11: app submitted to Apple for review — button now says
+- 2026-07-11: app submitted to Apple for review — button said
   "Submitted for App Store review".
-- On approval: swap in the real App Store badge + URL, replacing the
-  `TODO(app-store-url)` marker.
+- 2026-07-16: approved and live — button says "Download on the App Store"
+  and links to <https://apps.apple.com/us/app/sudosodoku/id6779813086>.
 
 Footer credits link Kai T. Chen to <https://kaichen.dev>.
