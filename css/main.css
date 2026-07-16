@@ -127,10 +127,14 @@ header nav a:hover {
 	font-weight: 500;
 }
 
-.coming-soon {
-	color: var(--secondary-text);
-	background: var(--card-background);
-	cursor: default;
+.app-store {
+	color: var(--background);
+	background: var(--accent);
+	border-color: transparent;
+}
+.app-store:hover {
+	text-decoration: none;
+	opacity: 0.85;
 }
 
 .platform {

@@ -62,5 +62,5 @@ mirror the app repo; keep them in sync with it rather than diverging.
 1. `python3 -m http.server 8080` and open the changed page.
 2. Check light + dark scheme, 375px + 1280px widths.
 3. No horizontal scroll, no console errors, no external requests.
-4. Links resolve (App Store link is a placeholder until launch — keep the
-   `TODO(app-store-url)` marker until we have the real one).
+4. Links resolve (App Store link:
+   <https://apps.apple.com/us/app/sudosodoku/id6779813086>).
