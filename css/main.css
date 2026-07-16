@@ -128,13 +128,17 @@ header nav a:hover {
 }
 
 .app-store {
-	color: var(--background);
-	background: var(--accent);
+	color: white;
+	background: light-dark(#0071E3, #0A84FF); /* Apple blue: apple.com light / iOS system dark */
 	border-color: transparent;
 }
 .app-store:hover {
 	text-decoration: none;
-	opacity: 0.85;
+	background: light-dark(#0077ED, #3395FF);
+}
+.app-store svg {
+	vertical-align: -0.14em;
+	margin-inline-end: 0.3em;
 }
 
 .platform {
