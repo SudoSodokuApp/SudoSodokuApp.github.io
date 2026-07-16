@@ -118,27 +118,39 @@ header nav a:hover {
 	margin-block-start: 2rem;
 }
 
-.download {
-	display: inline-block;
-	padding: 0.65em 1.5em;
-	border: 1px solid var(--separator);
-	border-radius: 2em;
-	font-size: 0.95rem;
-	font-weight: 500;
-}
-
+/* Apple App Store badge, drawn to match the official artwork:
+   always black, white text, thin gray keyline. */
 .app-store {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55em;
+	padding: 0.4em 1.1em;
 	color: white;
-	background: light-dark(#0071E3, #0A84FF); /* Apple blue: apple.com light / iOS system dark */
-	border-color: transparent;
+	background: black;
+	border: 1px solid #a6a6a6;
+	border-radius: 0.7em;
+	text-align: left;
+	font-size: 0.95rem;
 }
 .app-store:hover {
 	text-decoration: none;
-	background: light-dark(#0077ED, #3395FF);
 }
 .app-store svg {
-	vertical-align: -0.14em;
-	margin-inline-end: 0.3em;
+	flex: none;
+}
+.app-store span {
+	display: block;
+	line-height: 1.15;
+}
+.app-store small {
+	display: block;
+	font-size: 0.66em;
+	font-weight: 400;
+}
+.app-store strong {
+	font-size: 1.35em;
+	font-weight: 600;
+	letter-spacing: -0.01em;
 }
 
 .platform {
